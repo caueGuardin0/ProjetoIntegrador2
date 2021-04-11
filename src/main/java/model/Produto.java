@@ -12,5 +12,6 @@ package model;
 public class Produto {
     
     private String marca_prod;
+    private String modelo_prod;
     
 }
