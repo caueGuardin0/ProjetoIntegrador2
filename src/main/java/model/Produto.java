@@ -3,98 +3,121 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package Model;
 
 /**
  *
- * @author caueg
+ * @author caue.guardino
  */
 public class Produto {
-    
-    private String marca_prod;
-    private String modelo_prod;
-    private String estilo_prod;
-    private char modalidade_prod;
-    private String cor_prod;
-    private int tamanho_prod;
-    private int preco_prod;
-    private int qtd_prod;
-    
-    public Produto(){}
-    
-    public Produto(String marca_prod, String modelo_prod, String estilo_prod, char modalidade_prod, String cor_prod, int tamanho_prod, int preco_prod, int qtd_prod){   
-        this.marca_prod = marca_prod;
-        this.modelo_prod = modelo_prod;
-        this.estilo_prod = estilo_prod;
-        this.modalidade_prod = modalidade_prod;
-        this.cor_prod = cor_prod;
-        this.tamanho_prod = tamanho_prod;
-        this.preco_prod = preco_prod;
-        this.qtd_prod = qtd_prod;   
+
+    private static int qtdProdutosCadastrados;
+    private int idProd;
+    private String marcaProd;
+    private String modeloProd;
+    private char modalidadeProd;
+    private String corProd;
+    private int tamanhoProd;
+    private double precoProd;
+    private int qtdProd;
+
+    public Produto() {
+
+        qtdProdutosCadastrados++;
+        this.idProd = qtdProdutosCadastrados;
+
+    }
+
+    public Produto(String marcaProd, String modeloProd, char modalidadeProd, String corProd, int tamanhoProd, double precoProd, int qtdProd) {
+
+        qtdProdutosCadastrados++;
+        this.idProd = qtdProdutosCadastrados;
+        this.marcaProd = marcaProd;
+        this.modeloProd = modeloProd;
+        this.modalidadeProd = modalidadeProd;
+        this.corProd = corProd;
+        this.tamanhoProd = tamanhoProd;
+        this.precoProd = precoProd;
+        this.qtdProd = qtdProd;
+
+    }
+
+    public Produto(int idProd, String marcaProd, String modeloProd, char modalidadeProd, String corProd, int tamanhoProd, double precoProd, int qtdProd) {
+
+        this.idProd = idProd;
+        this.marcaProd = marcaProd;
+        this.modeloProd = modeloProd;
+        this.modalidadeProd = modalidadeProd;
+        this.corProd = corProd;
+        this.tamanhoProd = tamanhoProd;
+        this.precoProd = precoProd;
+        this.qtdProd = qtdProd;
+        
     }
     
-    public String getMarca_prod(){
-        return marca_prod;
+     public int getIdProd() {
+        return idProd;
+    }
+
+    public void setIdProd(int idProd) {
+        this.idProd = idProd;
+    }
+
+    public String getMarcaProd() {
+        return marcaProd;
+    }
+
+    public void setMarcaProd(String marcaProd) {
+        this.marcaProd = marcaProd;
+    }
+
+    public String getModeloProd() {
+        return modeloProd;
+    }
+
+    public void setModeloProd(String modeloProd) {
+        this.modeloProd = modeloProd;
     }
     
-    public void setMarca_prod(String marca_prod){
-        this.marca_prod = marca_prod;
+    public char getModalidadeProd(){
+        return modalidadeProd;
     }
     
-    public String getModelo_prod(){
-        return modelo_prod;
+    public void setModalidadeProd(char modalidadeProd){
+        this.modalidadeProd = modalidadeProd;
     }
-    
-    public void setModelo_prod(String modelo_prod){
-        this.modelo_prod = modelo_prod;
+
+    public String getCorProd() {
+        return corProd;
     }
-    
-    public String getEstilo_prod(){
-        return estilo_prod;
+
+    public void setCorProd(String corProd) {
+        this.corProd = corProd;
     }
-    
-    public void setEstilo_prod(String estilo_prod){
-        this.estilo_prod = estilo_prod;
+
+    public int getTamanhoProd() {
+        return tamanhoProd;
     }
-    
-    public char getModelidade_prod(){
-        return modalidade_prod;
+
+    public void setTamanhoProd(int tamanhoProd) {
+        this.tamanhoProd = tamanhoProd;
     }
-    
-    public void setModalidade_prod(char modalidade_prod){
-        this.modalidade_prod = modalidade_prod;
+
+    public double getPrecoProd() {
+        return precoProd;
     }
-    
-    public String getCor_prod(){
-        return cor_prod;
+
+    public void setPrecoProd(double precoProd) {
+        this.precoProd = precoProd;
     }
-    
-    public void setCor_prod(String cor_prod){
-        this.cor_prod = cor_prod;
+
+    public int getQtdProd() {
+        return qtdProd;
     }
-    
-    public int getTamanho_prod(){
-        return tamanho_prod;
+
+    public void setQuantidade(int qtdProd) {
+        this.qtdProd = qtdProd;
     }
-    
-    public void setTamanho_prod(int tamanho_prod){
-        this.tamanho_prod = tamanho_prod;
-    }
-    
-    public int getPreco_prod(){
-        return preco_prod;
-    }
-    
-    public void setPreco_prod(int preco_prod){
-        this.preco_prod = preco_prod;
-    }
-    
-    public int getQtd_prod(){
-        return qtd_prod;
-    }
-    
-    public void setQtd_prod(int qtd_prod){
-        this.qtd_prod = qtd_prod;
-    }
-    
+
 }
+    
