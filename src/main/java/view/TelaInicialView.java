@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author caueg
@@ -59,9 +61,12 @@ public class TelaInicialView extends javax.swing.JFrame {
         pnlCadastroClientes = new javax.swing.JPanel();
         pnlBackgroundCadastroClientes = new javax.swing.JPanel();
         btnCadastroCliente = new javax.swing.JButton();
+        btnAltExcCliProx = new javax.swing.JButton();
         pnlAltExcClientes = new javax.swing.JPanel();
         pnlBackgroundAltEclClientes = new javax.swing.JPanel();
         btnAltExcClientes = new javax.swing.JButton();
+        btnConsCliProx = new javax.swing.JButton();
+        btnCadasCliAnt = new javax.swing.JButton();
         pnlConultaClientes = new javax.swing.JPanel();
         pnlBackgroundConsultaClientes = new javax.swing.JPanel();
         lblInfoConsuClientes = new javax.swing.JLabel();
@@ -82,8 +87,11 @@ public class TelaInicialView extends javax.swing.JFrame {
         pnlMenuVendas = new javax.swing.JTabbedPane();
         pnlCadastrarVendas = new javax.swing.JPanel();
         btnCadastroVenda = new javax.swing.JButton();
+        btnAltExcVendProx = new javax.swing.JButton();
         pnlAltExcVendas = new javax.swing.JPanel();
         btnAltExcVendas = new javax.swing.JButton();
+        btnCadasVendAnt = new javax.swing.JButton();
+        btnConsVendProx = new javax.swing.JButton();
         pnlConsultasVendas = new javax.swing.JPanel();
         pnlTituloConsultaVendas = new javax.swing.JPanel();
         lblTituloVendas = new javax.swing.JLabel();
@@ -115,6 +123,7 @@ public class TelaInicialView extends javax.swing.JFrame {
         lblTotalVendasRelSint = new javax.swing.JLabel();
         txtTotalVendasRelSint = new javax.swing.JTextField();
         lblUnidadeMonetariaSint = new javax.swing.JLabel();
+        btnConsultaRelSint = new javax.swing.JButton();
         pnlRelatorioAnalitico = new javax.swing.JPanel();
         pnlTituloRelAnali = new javax.swing.JPanel();
         lblTituloRelAnali = new javax.swing.JLabel();
@@ -131,6 +140,7 @@ public class TelaInicialView extends javax.swing.JFrame {
         lblUnidadeMonetaria = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblRelatorioAnali = new javax.swing.JTable();
+        btnConsultaRelAnali = new javax.swing.JButton();
         mnuSistema = new javax.swing.JMenuBar();
         mnuArquivo = new javax.swing.JMenu();
         mnuSair = new javax.swing.JMenuItem();
@@ -190,7 +200,7 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addComponent(lblTituloBemVindo)
                 .addGap(105, 105, 105)
                 .addComponent(lblIntroducao)
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlTelaInicialLayout = new javax.swing.GroupLayout(pnlTelaInicial);
@@ -226,6 +236,16 @@ public class TelaInicialView extends javax.swing.JFrame {
             }
         });
 
+        btnAltExcCliProx.setBackground(new java.awt.Color(204, 255, 204));
+        btnAltExcCliProx.setFont(new java.awt.Font("Microsoft Tai Le", 1, 12)); // NOI18N
+        btnAltExcCliProx.setForeground(new java.awt.Color(0, 0, 0));
+        btnAltExcCliProx.setText("Alterar / Excluir Clientes");
+        btnAltExcCliProx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAltExcCliProxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlBackgroundCadastroClientesLayout = new javax.swing.GroupLayout(pnlBackgroundCadastroClientes);
         pnlBackgroundCadastroClientes.setLayout(pnlBackgroundCadastroClientesLayout);
         pnlBackgroundCadastroClientesLayout.setHorizontalGroup(
@@ -234,13 +254,19 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addGap(400, 400, 400)
                 .addComponent(btnCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(359, 359, 359))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBackgroundCadastroClientesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAltExcCliProx, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         pnlBackgroundCadastroClientesLayout.setVerticalGroup(
             pnlBackgroundCadastroClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlBackgroundCadastroClientesLayout.createSequentialGroup()
                 .addGap(221, 221, 221)
-                .addComponent(btnCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                .addGap(223, 223, 223))
+                .addComponent(btnCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                .addGap(185, 185, 185)
+                .addComponent(btnAltExcCliProx, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout pnlCadastroClientesLayout = new javax.swing.GroupLayout(pnlCadastroClientes);
@@ -268,6 +294,26 @@ public class TelaInicialView extends javax.swing.JFrame {
             }
         });
 
+        btnConsCliProx.setBackground(new java.awt.Color(204, 255, 204));
+        btnConsCliProx.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 12)); // NOI18N
+        btnConsCliProx.setForeground(new java.awt.Color(0, 0, 0));
+        btnConsCliProx.setText("Consulta Clientes");
+        btnConsCliProx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsCliProxActionPerformed(evt);
+            }
+        });
+
+        btnCadasCliAnt.setBackground(new java.awt.Color(204, 255, 204));
+        btnCadasCliAnt.setFont(new java.awt.Font("Microsoft Tai Le", 1, 12)); // NOI18N
+        btnCadasCliAnt.setForeground(new java.awt.Color(0, 0, 0));
+        btnCadasCliAnt.setText("Cadastro Clientes");
+        btnCadasCliAnt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadasCliAntActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlBackgroundAltEclClientesLayout = new javax.swing.GroupLayout(pnlBackgroundAltEclClientes);
         pnlBackgroundAltEclClientes.setLayout(pnlBackgroundAltEclClientesLayout);
         pnlBackgroundAltEclClientesLayout.setHorizontalGroup(
@@ -276,13 +322,23 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addGap(378, 378, 378)
                 .addComponent(btnAltExcClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
                 .addGap(350, 350, 350))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBackgroundAltEclClientesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnCadasCliAnt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnConsCliProx)
+                .addContainerGap())
         );
         pnlBackgroundAltEclClientesLayout.setVerticalGroup(
             pnlBackgroundAltEclClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlBackgroundAltEclClientesLayout.createSequentialGroup()
                 .addGap(216, 216, 216)
-                .addComponent(btnAltExcClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                .addGap(225, 225, 225))
+                .addComponent(btnAltExcClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                .addGap(186, 186, 186)
+                .addGroup(pnlBackgroundAltEclClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnConsCliProx)
+                    .addComponent(btnCadasCliAnt))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout pnlAltExcClientesLayout = new javax.swing.GroupLayout(pnlAltExcClientes);
@@ -366,6 +422,11 @@ public class TelaInicialView extends javax.swing.JFrame {
         btnConsultasClientes.setBackground(new java.awt.Color(204, 255, 204));
         btnConsultasClientes.setForeground(new java.awt.Color(0, 0, 0));
         btnConsultasClientes.setText("Consultar");
+        btnConsultasClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultasClientesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlInfoConsultClientesLayout = new javax.swing.GroupLayout(pnlInfoConsultClientes);
         pnlInfoConsultClientes.setLayout(pnlInfoConsultClientesLayout);
@@ -506,7 +567,7 @@ public class TelaInicialView extends javax.swing.JFrame {
         );
         pnlBackgroundProdutosLayout.setVerticalGroup(
             pnlBackgroundProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 556, Short.MAX_VALUE)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout pnlGerirProdutosLayout = new javax.swing.GroupLayout(pnlGerirProdutos);
@@ -542,21 +603,37 @@ public class TelaInicialView extends javax.swing.JFrame {
             }
         });
 
+        btnAltExcVendProx.setBackground(new java.awt.Color(204, 255, 204));
+        btnAltExcVendProx.setFont(new java.awt.Font("Microsoft Tai Le", 1, 12)); // NOI18N
+        btnAltExcVendProx.setForeground(new java.awt.Color(0, 0, 0));
+        btnAltExcVendProx.setText("Alterar / Excluir Vendas");
+        btnAltExcVendProx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAltExcVendProxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlCadastrarVendasLayout = new javax.swing.GroupLayout(pnlCadastrarVendas);
         pnlCadastrarVendas.setLayout(pnlCadastrarVendasLayout);
         pnlCadastrarVendasLayout.setHorizontalGroup(
             pnlCadastrarVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCadastrarVendasLayout.createSequentialGroup()
                 .addGap(400, 400, 400)
-                .addComponent(btnCadastroVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCadastroVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
                 .addGap(359, 359, 359))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCadastrarVendasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAltExcVendProx)
+                .addContainerGap())
         );
         pnlCadastrarVendasLayout.setVerticalGroup(
             pnlCadastrarVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCadastrarVendasLayout.createSequentialGroup()
                 .addGap(221, 221, 221)
-                .addComponent(btnCadastroVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                .addGap(223, 223, 223))
+                .addComponent(btnCadastroVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                .addGap(184, 184, 184)
+                .addComponent(btnAltExcVendProx)
+                .addContainerGap())
         );
 
         pnlMenuVendas.addTab("Cadastrar Venda", pnlCadastrarVendas);
@@ -566,10 +643,30 @@ public class TelaInicialView extends javax.swing.JFrame {
         btnAltExcVendas.setBackground(new java.awt.Color(204, 255, 204));
         btnAltExcVendas.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
         btnAltExcVendas.setForeground(new java.awt.Color(0, 0, 0));
-        btnAltExcVendas.setText("Alterar / Excluir Cliente");
+        btnAltExcVendas.setText("Alterar / Excluir Venda");
         btnAltExcVendas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAltExcVendasActionPerformed(evt);
+            }
+        });
+
+        btnCadasVendAnt.setBackground(new java.awt.Color(204, 255, 204));
+        btnCadasVendAnt.setFont(new java.awt.Font("Microsoft Tai Le", 1, 12)); // NOI18N
+        btnCadasVendAnt.setForeground(new java.awt.Color(0, 0, 0));
+        btnCadasVendAnt.setText("Cadastro Vendas");
+        btnCadasVendAnt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadasVendAntActionPerformed(evt);
+            }
+        });
+
+        btnConsVendProx.setBackground(new java.awt.Color(204, 255, 204));
+        btnConsVendProx.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 12)); // NOI18N
+        btnConsVendProx.setForeground(new java.awt.Color(0, 0, 0));
+        btnConsVendProx.setText("Consulta Vendas");
+        btnConsVendProx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsVendProxActionPerformed(evt);
             }
         });
 
@@ -581,13 +678,23 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addGap(378, 378, 378)
                 .addComponent(btnAltExcVendas, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
                 .addGap(350, 350, 350))
+            .addGroup(pnlAltExcVendasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnCadasVendAnt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnConsVendProx)
+                .addContainerGap())
         );
         pnlAltExcVendasLayout.setVerticalGroup(
             pnlAltExcVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAltExcVendasLayout.createSequentialGroup()
                 .addGap(216, 216, 216)
-                .addComponent(btnAltExcVendas, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                .addGap(225, 225, 225))
+                .addComponent(btnAltExcVendas, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                .addGap(186, 186, 186)
+                .addGroup(pnlAltExcVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnConsVendProx)
+                    .addComponent(btnCadasVendAnt))
+                .addContainerGap())
         );
 
         pnlMenuVendas.addTab("Alterar / Excluir Venda", pnlAltExcVendas);
@@ -659,6 +766,11 @@ public class TelaInicialView extends javax.swing.JFrame {
         btnConsultaVendas.setBackground(new java.awt.Color(204, 255, 204));
         btnConsultaVendas.setForeground(new java.awt.Color(0, 0, 0));
         btnConsultaVendas.setText("Consultar");
+        btnConsultaVendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaVendasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlInfoConsultaVendasLayout = new javax.swing.GroupLayout(pnlInfoConsultaVendas);
         pnlInfoConsultaVendas.setLayout(pnlInfoConsultaVendasLayout);
@@ -751,7 +863,7 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addComponent(pnlTituloConsultaVendas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblInfoConsultaVendas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(pnlInfoConsultaVendas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -925,12 +1037,13 @@ public class TelaInicialView extends javax.swing.JFrame {
                     .addComponent(lblDeRelSint)
                     .addComponent(lblAteRelSint))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlDataRelSintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDataIniSint)
-                    .addComponent(lblDataFimRelSint)
+                .addGroup(pnlDataRelSintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtDataIniRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDataFimRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addGroup(pnlDataRelSintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblDataIniSint)
+                        .addComponent(lblDataFimRelSint)
+                        .addComponent(txtDataFimRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pnlDataRelSintLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtDataFimRelSint, txtDataIniRelSint});
@@ -948,6 +1061,15 @@ public class TelaInicialView extends javax.swing.JFrame {
         lblUnidadeMonetariaSint.setForeground(new java.awt.Color(204, 255, 204));
         lblUnidadeMonetariaSint.setText("R$");
 
+        btnConsultaRelSint.setBackground(new java.awt.Color(204, 255, 204));
+        btnConsultaRelSint.setForeground(new java.awt.Color(0, 0, 0));
+        btnConsultaRelSint.setText("Consultar");
+        btnConsultaRelSint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaRelSintActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlRelatorioSinteticoLayout = new javax.swing.GroupLayout(pnlRelatorioSintetico);
         pnlRelatorioSintetico.setLayout(pnlRelatorioSinteticoLayout);
         pnlRelatorioSinteticoLayout.setHorizontalGroup(
@@ -962,21 +1084,26 @@ public class TelaInicialView extends javax.swing.JFrame {
                     .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
                         .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
-                                .addGap(175, 175, 175)
-                                .addComponent(lblInfoRelSint))
-                            .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
-                                .addGap(188, 188, 188)
-                                .addComponent(pnlDataRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
                                 .addGap(323, 323, 323)
                                 .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
                                         .addComponent(lblUnidadeMonetariaSint)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtTotalVendasRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblTotalVendasRelSint))))
+                                    .addComponent(lblTotalVendasRelSint)))
+                            .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
+                                .addGap(175, 175, 175)
+                                .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(pnlDataRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblInfoRelSint))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
+                .addGap(417, 417, 417)
+                .addComponent(btnConsultaRelSint)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlRelatorioSinteticoLayout.setVerticalGroup(
             pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -985,9 +1112,11 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addComponent(pnlTituloRelSint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblInfoRelSint)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlDataRelSint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(34, 34, 34)
+                .addGap(2, 2, 2)
+                .addComponent(btnConsultaRelSint)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblTotalVendasRelSint)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1016,7 +1145,7 @@ public class TelaInicialView extends javax.swing.JFrame {
             pnlTituloRelAnaliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTituloRelAnaliLayout.createSequentialGroup()
                 .addGap(345, 345, 345)
-                .addComponent(lblTituloRelAnali, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                .addComponent(lblTituloRelAnali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(341, 341, 341))
         );
         pnlTituloRelAnaliLayout.setVerticalGroup(
@@ -1102,11 +1231,12 @@ public class TelaInicialView extends javax.swing.JFrame {
                     .addComponent(lblDe)
                     .addComponent(lblAte))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlDatasRelAnaliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDataIni)
-                    .addComponent(lblDataFim)
+                .addGroup(pnlDatasRelAnaliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtAnaliDataIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAnaliDataFim, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlDatasRelAnaliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblDataIni)
+                        .addComponent(lblDataFim)
+                        .addComponent(txtAnaliDataFim, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -1158,6 +1288,15 @@ public class TelaInicialView extends javax.swing.JFrame {
         tblRelatorioAnali.setGridColor(new java.awt.Color(102, 102, 102));
         jScrollPane4.setViewportView(tblRelatorioAnali);
 
+        btnConsultaRelAnali.setBackground(new java.awt.Color(204, 255, 204));
+        btnConsultaRelAnali.setForeground(new java.awt.Color(0, 0, 0));
+        btnConsultaRelAnali.setText("Consultar");
+        btnConsultaRelAnali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaRelAnaliActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlRelatorioAnaliticoLayout = new javax.swing.GroupLayout(pnlRelatorioAnalitico);
         pnlRelatorioAnalitico.setLayout(pnlRelatorioAnaliticoLayout);
         pnlRelatorioAnaliticoLayout.setHorizontalGroup(
@@ -1167,16 +1306,10 @@ public class TelaInicialView extends javax.swing.JFrame {
                     .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 930, Short.MAX_VALUE)
+                            .addComponent(jScrollPane4)
                             .addComponent(pnlTituloRelAnali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
                         .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
-                                .addGap(175, 175, 175)
-                                .addComponent(lblInfoRelAnali))
-                            .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
-                                .addGap(188, 188, 188)
-                                .addComponent(pnlDatasRelAnali, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
                                 .addGap(323, 323, 323)
                                 .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1184,9 +1317,20 @@ public class TelaInicialView extends javax.swing.JFrame {
                                         .addComponent(lblUnidadeMonetaria)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtTotalVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblTotalVenda))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(lblTotalVenda)))
+                            .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
+                                .addGap(175, 175, 175)
+                                .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(pnlDatasRelAnali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(lblInfoRelAnali))))
+                        .addGap(173, 173, 173)))
                 .addContainerGap())
+            .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
+                .addGap(416, 416, 416)
+                .addComponent(btnConsultaRelAnali)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlRelatorioAnaliticoLayout.setVerticalGroup(
             pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1195,9 +1339,11 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addComponent(pnlTituloRelAnali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblInfoRelAnali)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlDatasRelAnali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(34, 34, 34)
+                .addGap(2, 2, 2)
+                .addComponent(btnConsultaRelAnali)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblTotalVenda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1392,6 +1538,54 @@ public class TelaInicialView extends javax.swing.JFrame {
         alterarExcluirVendas.setVisible(true);
     }//GEN-LAST:event_mnuAltExcVendaActionPerformed
 
+    private void btnConsCliProxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsCliProxActionPerformed
+        pnlMenuClientes.setSelectedIndex(2);
+    }//GEN-LAST:event_btnConsCliProxActionPerformed
+
+    private void btnConsVendProxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsVendProxActionPerformed
+        pnlMenuVendas.setSelectedIndex(2);
+    }//GEN-LAST:event_btnConsVendProxActionPerformed
+
+    private void btnAltExcCliProxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltExcCliProxActionPerformed
+        pnlMenuClientes.setSelectedIndex(1);
+    }//GEN-LAST:event_btnAltExcCliProxActionPerformed
+
+    private void btnCadasCliAntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadasCliAntActionPerformed
+        pnlMenuClientes.setSelectedIndex(0);
+    }//GEN-LAST:event_btnCadasCliAntActionPerformed
+
+    private void btnAltExcVendProxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltExcVendProxActionPerformed
+        pnlMenuVendas.setSelectedIndex(1);
+    }//GEN-LAST:event_btnAltExcVendProxActionPerformed
+
+    private void btnCadasVendAntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadasVendAntActionPerformed
+        pnlMenuVendas.setSelectedIndex(0);
+    }//GEN-LAST:event_btnCadasVendAntActionPerformed
+
+    private void btnConsultasClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultasClientesActionPerformed
+        if(txtIdConsultaClientes.getText().trim().equals("") || txtNomeConsultaClientes.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(this, "Informe um dos campos para pesquisar");
+        }
+    }//GEN-LAST:event_btnConsultasClientesActionPerformed
+
+    private void btnConsultaVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaVendasActionPerformed
+        if(txtIdVendaConsulta.getText().trim().equals("") || txtCpfClienteConsulta.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(this, "Informe um dos campos para pesquisar");
+        }
+    }//GEN-LAST:event_btnConsultaVendasActionPerformed
+
+    private void btnConsultaRelSintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaRelSintActionPerformed
+        if(txtDataIniRelSint.getText().trim().equals("") ||txtDataFimRelSint.getText().trim().equals("") ){
+            JOptionPane.showMessageDialog(this, "Informe as datas corretamente para consulta");
+        }
+    }//GEN-LAST:event_btnConsultaRelSintActionPerformed
+
+    private void btnConsultaRelAnaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaRelAnaliActionPerformed
+        if(txtAnaliDataIni.getText().trim().equals("") ||txtAnaliDataFim.getText().trim().equals("") ){
+            JOptionPane.showMessageDialog(this, "Informe as datas corretamente para consulta");
+        }
+    }//GEN-LAST:event_btnConsultaRelAnaliActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1428,14 +1622,20 @@ public class TelaInicialView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAltExcCliProx;
     private javax.swing.JButton btnAltExcClientes;
+    private javax.swing.JButton btnAltExcVendProx;
     private javax.swing.JButton btnAltExcVendas;
+    private javax.swing.JButton btnCadasCliAnt;
+    private javax.swing.JButton btnCadasVendAnt;
     private javax.swing.JButton btnCadastroCliente;
     private javax.swing.JButton btnCadastroVenda;
+    private javax.swing.JButton btnConsCliProx;
+    private javax.swing.JButton btnConsVendProx;
+    private javax.swing.JButton btnConsultaRelAnali;
+    private javax.swing.JButton btnConsultaRelSint;
     private javax.swing.JButton btnConsultaVendas;
     private javax.swing.JButton btnConsultasClientes;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1461,8 +1661,6 @@ public class TelaInicialView extends javax.swing.JFrame {
     private javax.swing.JLabel lblTituloConsulClientes;
     private javax.swing.JLabel lblTituloRelAnali;
     private javax.swing.JLabel lblTituloVendas;
-    private javax.swing.JLabel lblTituloVendas1;
-    private javax.swing.JLabel lblTituloVendas2;
     private javax.swing.JLabel lblTituloVendas3;
     private javax.swing.JLabel lblTotalVenda;
     private javax.swing.JLabel lblTotalVendasRelSint;
