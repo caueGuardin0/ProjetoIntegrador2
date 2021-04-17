@@ -1563,13 +1563,13 @@ public class TelaInicialView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadasVendAntActionPerformed
 
     private void btnConsultasClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultasClientesActionPerformed
-        if(txtIdConsultaClientes.getText().trim().equals("") || txtNomeConsultaClientes.getText().trim().equals("")){
+        if(txtIdConsultaClientes.getText().trim().equals("") && txtNomeConsultaClientes.getText().trim().equals("")){
             JOptionPane.showMessageDialog(this, "Informe um dos campos para pesquisar");
         }
     }//GEN-LAST:event_btnConsultasClientesActionPerformed
 
     private void btnConsultaVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaVendasActionPerformed
-        if(txtIdVendaConsulta.getText().trim().equals("") || txtCpfClienteConsulta.getText().trim().equals("")){
+        if(txtIdVendaConsulta.getText().trim().equals("") && txtCpfClienteConsulta.getText().trim().equals("")){
             JOptionPane.showMessageDialog(this, "Informe um dos campos para pesquisar");
         }
     }//GEN-LAST:event_btnConsultaVendasActionPerformed
