@@ -82,6 +82,28 @@ public class TelaInicialView extends javax.swing.JFrame {
         lblTituloConsulClientes = new javax.swing.JLabel();
         pnlGerirProdutos = new javax.swing.JPanel();
         pnlBackgroundProdutos = new javax.swing.JPanel();
+        pnlMenuProdutos = new javax.swing.JTabbedPane();
+        pnlCadastroProdutos = new javax.swing.JPanel();
+        btnCadastroProdutos = new javax.swing.JButton();
+        btnAltExcProdProx = new javax.swing.JButton();
+        pnlAltExcProdutos = new javax.swing.JPanel();
+        btnAltExcProdutos = new javax.swing.JButton();
+        btnCadasProdAnt = new javax.swing.JButton();
+        btnConsProdProx = new javax.swing.JButton();
+        pnlConsultaProdutos = new javax.swing.JPanel();
+        pnlConultaProdutos = new javax.swing.JPanel();
+        pnlBackgroundConsultaProdutos = new javax.swing.JPanel();
+        lblInfoConsuClientes1 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tblConsultaClientes1 = new javax.swing.JTable();
+        pnlInfoConsultProdutos = new javax.swing.JPanel();
+        txtIdConsultaClientes1 = new javax.swing.JTextField();
+        lblIdConsultaClientes1 = new javax.swing.JLabel();
+        lblNomeConsultaClientes1 = new javax.swing.JLabel();
+        txtNomeConsultaClientes1 = new javax.swing.JTextField();
+        btnConsultasClientes1 = new javax.swing.JButton();
+        pnlTituloConsulProdutos = new javax.swing.JPanel();
+        lblTituloConsulProdutos = new javax.swing.JLabel();
         pnlGerirVendas = new javax.swing.JPanel();
         pnlBackgroundVendas = new javax.swing.JPanel();
         pnlMenuVendas = new javax.swing.JTabbedPane();
@@ -121,9 +143,9 @@ public class TelaInicialView extends javax.swing.JFrame {
         txtDataIniRelSint = new javax.swing.JFormattedTextField();
         txtDataFimRelSint = new javax.swing.JFormattedTextField();
         lblTotalVendasRelSint = new javax.swing.JLabel();
-        txtTotalVendasRelSint = new javax.swing.JTextField();
         lblUnidadeMonetariaSint = new javax.swing.JLabel();
         btnConsultaRelSint = new javax.swing.JButton();
+        lblSomaTotalVendRelSint = new javax.swing.JLabel();
         pnlRelatorioAnalitico = new javax.swing.JPanel();
         pnlTituloRelAnali = new javax.swing.JPanel();
         lblTituloRelAnali = new javax.swing.JLabel();
@@ -136,11 +158,11 @@ public class TelaInicialView extends javax.swing.JFrame {
         txtAnaliDataIni = new javax.swing.JFormattedTextField();
         txtAnaliDataFim = new javax.swing.JFormattedTextField();
         lblTotalVenda = new javax.swing.JLabel();
-        txtTotalVendas = new javax.swing.JTextField();
         lblUnidadeMonetaria = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblRelatorioAnali = new javax.swing.JTable();
         btnConsultaRelAnali = new javax.swing.JButton();
+        lblSomaTotalVendRelAnali = new javax.swing.JLabel();
         mnuSistema = new javax.swing.JMenuBar();
         mnuArquivo = new javax.swing.JMenu();
         mnuSair = new javax.swing.JMenuItem();
@@ -148,6 +170,8 @@ public class TelaInicialView extends javax.swing.JFrame {
         mnuCadastroClientes = new javax.swing.JMenuItem();
         mnuAltExcClientes = new javax.swing.JMenuItem();
         mnuProduto = new javax.swing.JMenu();
+        mnuCadastroProduto = new javax.swing.JMenuItem();
+        mnuAltExcProduto = new javax.swing.JMenuItem();
         mnuVenda = new javax.swing.JMenu();
         mnuCadastroVenda = new javax.swing.JMenuItem();
         mnuAltExcVenda = new javax.swing.JMenuItem();
@@ -559,15 +583,333 @@ public class TelaInicialView extends javax.swing.JFrame {
         pnlBackgroundProdutos.setBackground(new java.awt.Color(0, 0, 0));
         pnlBackgroundProdutos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 204), new java.awt.Color(204, 255, 204), null));
 
+        pnlMenuProdutos.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        pnlMenuProdutos.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
+
+        pnlCadastroProdutos.setBackground(new java.awt.Color(0, 0, 0));
+
+        btnCadastroProdutos.setBackground(new java.awt.Color(204, 255, 204));
+        btnCadastroProdutos.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
+        btnCadastroProdutos.setForeground(new java.awt.Color(0, 0, 0));
+        btnCadastroProdutos.setText("Cadastrar novo Produto");
+        btnCadastroProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCadastroProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroProdutosActionPerformed(evt);
+            }
+        });
+
+        btnAltExcProdProx.setBackground(new java.awt.Color(204, 255, 204));
+        btnAltExcProdProx.setForeground(new java.awt.Color(0, 0, 0));
+        btnAltExcProdProx.setText("Alterar / Excluir Produtos");
+        btnAltExcProdProx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAltExcProdProxActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlCadastroProdutosLayout = new javax.swing.GroupLayout(pnlCadastroProdutos);
+        pnlCadastroProdutos.setLayout(pnlCadastroProdutosLayout);
+        pnlCadastroProdutosLayout.setHorizontalGroup(
+            pnlCadastroProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCadastroProdutosLayout.createSequentialGroup()
+                .addContainerGap(762, Short.MAX_VALUE)
+                .addComponent(btnAltExcProdProx)
+                .addGap(17, 17, 17))
+            .addGroup(pnlCadastroProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlCadastroProdutosLayout.createSequentialGroup()
+                    .addGap(379, 379, 379)
+                    .addComponent(btnCadastroProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(380, 380, 380)))
+        );
+        pnlCadastroProdutosLayout.setVerticalGroup(
+            pnlCadastroProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCadastroProdutosLayout.createSequentialGroup()
+                .addContainerGap(494, Short.MAX_VALUE)
+                .addComponent(btnAltExcProdProx)
+                .addContainerGap())
+            .addGroup(pnlCadastroProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlCadastroProdutosLayout.createSequentialGroup()
+                    .addGap(223, 223, 223)
+                    .addComponent(btnCadastroProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addGap(224, 224, 224)))
+        );
+
+        pnlMenuProdutos.addTab("Cadastrar Produto", pnlCadastroProdutos);
+
+        pnlAltExcProdutos.setBackground(new java.awt.Color(0, 0, 0));
+
+        btnAltExcProdutos.setBackground(new java.awt.Color(204, 255, 204));
+        btnAltExcProdutos.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
+        btnAltExcProdutos.setForeground(new java.awt.Color(0, 0, 0));
+        btnAltExcProdutos.setText("Alterar / Excluir Produtos");
+        btnAltExcProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAltExcProdutosActionPerformed(evt);
+            }
+        });
+
+        btnCadasProdAnt.setBackground(new java.awt.Color(204, 255, 204));
+        btnCadasProdAnt.setForeground(new java.awt.Color(0, 0, 0));
+        btnCadasProdAnt.setText("Cadastrar Produtos");
+        btnCadasProdAnt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadasProdAntActionPerformed(evt);
+            }
+        });
+
+        btnConsProdProx.setBackground(new java.awt.Color(204, 255, 204));
+        btnConsProdProx.setForeground(new java.awt.Color(0, 0, 0));
+        btnConsProdProx.setText("Consulta Produtos");
+        btnConsProdProx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsProdProxActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlAltExcProdutosLayout = new javax.swing.GroupLayout(pnlAltExcProdutos);
+        pnlAltExcProdutos.setLayout(pnlAltExcProdutosLayout);
+        pnlAltExcProdutosLayout.setHorizontalGroup(
+            pnlAltExcProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlAltExcProdutosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnCadasProdAnt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 653, Short.MAX_VALUE)
+                .addComponent(btnConsProdProx)
+                .addContainerGap())
+            .addGroup(pnlAltExcProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlAltExcProdutosLayout.createSequentialGroup()
+                    .addGap(364, 364, 364)
+                    .addComponent(btnAltExcProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                    .addGap(364, 364, 364)))
+        );
+        pnlAltExcProdutosLayout.setVerticalGroup(
+            pnlAltExcProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAltExcProdutosLayout.createSequentialGroup()
+                .addContainerGap(494, Short.MAX_VALUE)
+                .addGroup(pnlAltExcProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCadasProdAnt)
+                    .addComponent(btnConsProdProx))
+                .addContainerGap())
+            .addGroup(pnlAltExcProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlAltExcProdutosLayout.createSequentialGroup()
+                    .addGap(221, 221, 221)
+                    .addComponent(btnAltExcProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addGap(221, 221, 221)))
+        );
+
+        pnlMenuProdutos.addTab("Alterar / Excluir Produtos", pnlAltExcProdutos);
+
+        pnlConsultaProdutos.setBackground(new java.awt.Color(0, 0, 0));
+
+        pnlBackgroundConsultaProdutos.setBackground(new java.awt.Color(0, 0, 0));
+
+        lblInfoConsuClientes1.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 18)); // NOI18N
+        lblInfoConsuClientes1.setForeground(new java.awt.Color(204, 255, 204));
+        lblInfoConsuClientes1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblInfoConsuClientes1.setText("Informe o ID ou marca para consulta");
+
+        tblConsultaClientes1.setBackground(new java.awt.Color(0, 0, 0));
+        tblConsultaClientes1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
+        tblConsultaClientes1.setForeground(new java.awt.Color(204, 255, 204));
+        tblConsultaClientes1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Marca", "Modelo", "Modalidade", "Preço", "Cor", "Tamanho"
+            }
+        ));
+        tblConsultaClientes1.setGridColor(new java.awt.Color(102, 102, 102));
+        jScrollPane5.setViewportView(tblConsultaClientes1);
+
+        pnlInfoConsultProdutos.setBackground(new java.awt.Color(0, 0, 0));
+
+        txtIdConsultaClientes1.setBackground(new java.awt.Color(204, 255, 204));
+        txtIdConsultaClientes1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 12)); // NOI18N
+        txtIdConsultaClientes1.setForeground(new java.awt.Color(0, 0, 0));
+        txtIdConsultaClientes1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
+
+        lblIdConsultaClientes1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
+        lblIdConsultaClientes1.setForeground(new java.awt.Color(204, 255, 204));
+        lblIdConsultaClientes1.setText("ID:");
+
+        lblNomeConsultaClientes1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
+        lblNomeConsultaClientes1.setForeground(new java.awt.Color(204, 255, 204));
+        lblNomeConsultaClientes1.setText("Marca:");
+
+        txtNomeConsultaClientes1.setBackground(new java.awt.Color(204, 255, 204));
+        txtNomeConsultaClientes1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 12)); // NOI18N
+        txtNomeConsultaClientes1.setForeground(new java.awt.Color(0, 0, 0));
+        txtNomeConsultaClientes1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
+        txtNomeConsultaClientes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeConsultaClientes1ActionPerformed(evt);
+            }
+        });
+
+        btnConsultasClientes1.setBackground(new java.awt.Color(204, 255, 204));
+        btnConsultasClientes1.setForeground(new java.awt.Color(0, 0, 0));
+        btnConsultasClientes1.setText("Consultar");
+        btnConsultasClientes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultasClientes1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlInfoConsultProdutosLayout = new javax.swing.GroupLayout(pnlInfoConsultProdutos);
+        pnlInfoConsultProdutos.setLayout(pnlInfoConsultProdutosLayout);
+        pnlInfoConsultProdutosLayout.setHorizontalGroup(
+            pnlInfoConsultProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlInfoConsultProdutosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblIdConsultaClientes1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtIdConsultaClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(148, 148, 148)
+                .addComponent(lblNomeConsultaClientes1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtNomeConsultaClientes1)
+                .addGap(193, 193, 193)
+                .addComponent(btnConsultasClientes1)
+                .addContainerGap())
+        );
+        pnlInfoConsultProdutosLayout.setVerticalGroup(
+            pnlInfoConsultProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlInfoConsultProdutosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlInfoConsultProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIdConsultaClientes1)
+                    .addComponent(txtIdConsultaClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNomeConsultaClientes1)
+                    .addComponent(txtNomeConsultaClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConsultasClientes1))
+                .addContainerGap())
+        );
+
+        pnlTituloConsulProdutos.setBackground(new java.awt.Color(204, 255, 204));
+        pnlTituloConsulProdutos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
+
+        lblTituloConsulProdutos.setBackground(new java.awt.Color(204, 255, 204));
+        lblTituloConsulProdutos.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 24)); // NOI18N
+        lblTituloConsulProdutos.setForeground(new java.awt.Color(0, 0, 0));
+        lblTituloConsulProdutos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTituloConsulProdutos.setText("Consulta de Produtos");
+
+        javax.swing.GroupLayout pnlTituloConsulProdutosLayout = new javax.swing.GroupLayout(pnlTituloConsulProdutos);
+        pnlTituloConsulProdutos.setLayout(pnlTituloConsulProdutosLayout);
+        pnlTituloConsulProdutosLayout.setHorizontalGroup(
+            pnlTituloConsulProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTituloConsulProdutosLayout.createSequentialGroup()
+                .addGap(345, 345, 345)
+                .addComponent(lblTituloConsulProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(341, 341, 341))
+        );
+        pnlTituloConsulProdutosLayout.setVerticalGroup(
+            pnlTituloConsulProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTituloConsulProdutosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTituloConsulProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout pnlBackgroundConsultaProdutosLayout = new javax.swing.GroupLayout(pnlBackgroundConsultaProdutos);
+        pnlBackgroundConsultaProdutos.setLayout(pnlBackgroundConsultaProdutosLayout);
+        pnlBackgroundConsultaProdutosLayout.setHorizontalGroup(
+            pnlBackgroundConsultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBackgroundConsultaProdutosLayout.createSequentialGroup()
+                .addGap(311, 311, 311)
+                .addComponent(lblInfoConsuClientes1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(323, 323, 323))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBackgroundConsultaProdutosLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(pnlInfoConsultProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(pnlBackgroundConsultaProdutosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlTituloConsulProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(pnlBackgroundConsultaProdutosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5)
+                .addContainerGap())
+        );
+        pnlBackgroundConsultaProdutosLayout.setVerticalGroup(
+            pnlBackgroundConsultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBackgroundConsultaProdutosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlTituloConsulProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblInfoConsuClientes1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(pnlInfoConsultProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout pnlConultaProdutosLayout = new javax.swing.GroupLayout(pnlConultaProdutos);
+        pnlConultaProdutos.setLayout(pnlConultaProdutosLayout);
+        pnlConultaProdutosLayout.setHorizontalGroup(
+            pnlConultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlBackgroundConsultaProdutos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlConultaProdutosLayout.setVerticalGroup(
+            pnlConultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlBackgroundConsultaProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pnlConsultaProdutosLayout = new javax.swing.GroupLayout(pnlConsultaProdutos);
+        pnlConsultaProdutos.setLayout(pnlConsultaProdutosLayout);
+        pnlConsultaProdutosLayout.setHorizontalGroup(
+            pnlConsultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 947, Short.MAX_VALUE)
+            .addGroup(pnlConsultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlConsultaProdutosLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(pnlConultaProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        pnlConsultaProdutosLayout.setVerticalGroup(
+            pnlConsultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 532, Short.MAX_VALUE)
+            .addGroup(pnlConsultaProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlConsultaProdutosLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(pnlConultaProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        pnlMenuProdutos.addTab("Consulta Produtos", pnlConsultaProdutos);
+
         javax.swing.GroupLayout pnlBackgroundProdutosLayout = new javax.swing.GroupLayout(pnlBackgroundProdutos);
         pnlBackgroundProdutos.setLayout(pnlBackgroundProdutosLayout);
         pnlBackgroundProdutosLayout.setHorizontalGroup(
             pnlBackgroundProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 944, Short.MAX_VALUE)
+            .addComponent(pnlMenuProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 944, Short.MAX_VALUE)
         );
         pnlBackgroundProdutosLayout.setVerticalGroup(
             pnlBackgroundProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addComponent(pnlMenuProdutos, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         javax.swing.GroupLayout pnlGerirProdutosLayout = new javax.swing.GroupLayout(pnlGerirProdutos);
@@ -870,7 +1212,7 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlMenuVendas.addTab("Consultar Vendas", pnlConsultasVendas);
+        pnlMenuVendas.addTab("Consulta Vendas", pnlConsultasVendas);
 
         javax.swing.GroupLayout pnlBackgroundVendasLayout = new javax.swing.GroupLayout(pnlBackgroundVendas);
         pnlBackgroundVendas.setLayout(pnlBackgroundVendasLayout);
@@ -1043,7 +1385,7 @@ public class TelaInicialView extends javax.swing.JFrame {
                         .addComponent(lblDataIniSint)
                         .addComponent(lblDataFimRelSint)
                         .addComponent(txtDataFimRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pnlDataRelSintLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtDataFimRelSint, txtDataIniRelSint});
@@ -1051,11 +1393,6 @@ public class TelaInicialView extends javax.swing.JFrame {
         lblTotalVendasRelSint.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblTotalVendasRelSint.setForeground(new java.awt.Color(204, 255, 204));
         lblTotalVendasRelSint.setText("Total em Venda no periodo selecionado:");
-
-        txtTotalVendasRelSint.setBackground(new java.awt.Color(204, 255, 204));
-        txtTotalVendasRelSint.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        txtTotalVendasRelSint.setForeground(new java.awt.Color(0, 0, 0));
-        txtTotalVendasRelSint.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
 
         lblUnidadeMonetariaSint.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lblUnidadeMonetariaSint.setForeground(new java.awt.Color(204, 255, 204));
@@ -1069,6 +1406,10 @@ public class TelaInicialView extends javax.swing.JFrame {
                 btnConsultaRelSintActionPerformed(evt);
             }
         });
+
+        lblSomaTotalVendRelSint.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
+        lblSomaTotalVendRelSint.setForeground(new java.awt.Color(204, 255, 204));
+        lblSomaTotalVendRelSint.setText("________________________");
 
         javax.swing.GroupLayout pnlRelatorioSinteticoLayout = new javax.swing.GroupLayout(pnlRelatorioSintetico);
         pnlRelatorioSintetico.setLayout(pnlRelatorioSinteticoLayout);
@@ -1084,20 +1425,22 @@ public class TelaInicialView extends javax.swing.JFrame {
                     .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
                         .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
-                                .addGap(323, 323, 323)
-                                .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
-                                        .addComponent(lblUnidadeMonetariaSint)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtTotalVendasRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblTotalVendasRelSint)))
-                            .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
                                 .addGap(175, 175, 175)
                                 .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addComponent(pnlDataRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblInfoRelSint))))
+                                    .addComponent(lblInfoRelSint)))
+                            .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
+                                .addGap(325, 325, 325)
+                                .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(lblUnidadeMonetariaSint)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblSomaTotalVendRelSint)
+                                        .addGap(71, 71, 71))
+                                    .addComponent(lblTotalVendasRelSint))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(pnlRelatorioSinteticoLayout.createSequentialGroup()
@@ -1118,10 +1461,10 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addComponent(btnConsultaRelSint)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblTotalVendasRelSint)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(7, 7, 7)
+                .addGroup(pnlRelatorioSinteticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUnidadeMonetariaSint)
-                    .addComponent(txtTotalVendasRelSint, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSomaTotalVendRelSint))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1246,11 +1589,6 @@ public class TelaInicialView extends javax.swing.JFrame {
         lblTotalVenda.setForeground(new java.awt.Color(204, 255, 204));
         lblTotalVenda.setText("Total em Venda no periodo selecionado:");
 
-        txtTotalVendas.setBackground(new java.awt.Color(204, 255, 204));
-        txtTotalVendas.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        txtTotalVendas.setForeground(new java.awt.Color(0, 0, 0));
-        txtTotalVendas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
-
         lblUnidadeMonetaria.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lblUnidadeMonetaria.setForeground(new java.awt.Color(204, 255, 204));
         lblUnidadeMonetaria.setText("R$");
@@ -1297,6 +1635,10 @@ public class TelaInicialView extends javax.swing.JFrame {
             }
         });
 
+        lblSomaTotalVendRelAnali.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
+        lblSomaTotalVendRelAnali.setForeground(new java.awt.Color(204, 255, 204));
+        lblSomaTotalVendRelAnali.setText("________________________");
+
         javax.swing.GroupLayout pnlRelatorioAnaliticoLayout = new javax.swing.GroupLayout(pnlRelatorioAnalitico);
         pnlRelatorioAnalitico.setLayout(pnlRelatorioAnaliticoLayout);
         pnlRelatorioAnaliticoLayout.setHorizontalGroup(
@@ -1315,8 +1657,9 @@ public class TelaInicialView extends javax.swing.JFrame {
                                 .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
                                         .addComponent(lblUnidadeMonetaria)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtTotalVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(38, 38, 38)
+                                        .addComponent(lblSomaTotalVendRelAnali)
+                                        .addGap(72, 72, 72))
                                     .addComponent(lblTotalVenda)))
                             .addGroup(pnlRelatorioAnaliticoLayout.createSequentialGroup()
                                 .addGap(175, 175, 175)
@@ -1345,10 +1688,10 @@ public class TelaInicialView extends javax.swing.JFrame {
                 .addComponent(btnConsultaRelAnali)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblTotalVenda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(7, 7, 7)
+                .addGroup(pnlRelatorioAnaliticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUnidadeMonetaria)
-                    .addComponent(txtTotalVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSomaTotalVendRelAnali))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1445,6 +1788,25 @@ public class TelaInicialView extends javax.swing.JFrame {
 
         mnuProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 204), new java.awt.Color(204, 255, 204), null));
         mnuProduto.setText("Produto");
+
+        mnuCadastroProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK));
+        mnuCadastroProduto.setText("Cadastro");
+        mnuCadastroProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuCadastroProdutoActionPerformed(evt);
+            }
+        });
+        mnuProduto.add(mnuCadastroProduto);
+
+        mnuAltExcProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
+        mnuAltExcProduto.setText("Alteração e Exclusão");
+        mnuAltExcProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAltExcProdutoActionPerformed(evt);
+            }
+        });
+        mnuProduto.add(mnuAltExcProduto);
+
         mnuSistema.add(mnuProduto);
 
         mnuVenda.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 204), new java.awt.Color(204, 255, 204), null));
@@ -1569,7 +1931,8 @@ public class TelaInicialView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConsultasClientesActionPerformed
 
     private void btnConsultaVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaVendasActionPerformed
-        if(txtIdVendaConsulta.getText().trim().equals("") && txtCpfClienteConsulta.getText().trim().equals("")){
+        
+        if(txtIdVendaConsulta.getText().trim().equals("") && txtCpfClienteConsulta.getText().trim().equals("   .   .   -  ")){
             JOptionPane.showMessageDialog(this, "Informe um dos campos para pesquisar");
         }
     }//GEN-LAST:event_btnConsultaVendasActionPerformed
@@ -1585,6 +1948,46 @@ public class TelaInicialView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Informe as datas corretamente para consulta");
         }
     }//GEN-LAST:event_btnConsultaRelAnaliActionPerformed
+
+    private void btnAltExcProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltExcProdutosActionPerformed
+        TelaAlteExclProdutosView alterarExcluirProd = new TelaAlteExclProdutosView();
+        alterarExcluirProd.setVisible(true);
+    }//GEN-LAST:event_btnAltExcProdutosActionPerformed
+
+    private void btnCadastroProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroProdutosActionPerformed
+        TelaCadastroProdutosView cadastrarProd = new TelaCadastroProdutosView();
+        cadastrarProd.setVisible(true);
+    }//GEN-LAST:event_btnCadastroProdutosActionPerformed
+
+    private void btnAltExcProdProxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltExcProdProxActionPerformed
+        pnlMenuProdutos.setSelectedIndex(1);
+    }//GEN-LAST:event_btnAltExcProdProxActionPerformed
+
+    private void mnuCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuCadastroProdutoActionPerformed
+        TelaCadastroProdutosView cadastrarProd = new TelaCadastroProdutosView();
+        cadastrarProd.setVisible(true);
+    }//GEN-LAST:event_mnuCadastroProdutoActionPerformed
+
+    private void mnuAltExcProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAltExcProdutoActionPerformed
+        TelaAlteExclProdutosView alterarExcluirProd = new TelaAlteExclProdutosView();
+        alterarExcluirProd.setVisible(true);
+    }//GEN-LAST:event_mnuAltExcProdutoActionPerformed
+
+    private void txtNomeConsultaClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeConsultaClientes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeConsultaClientes1ActionPerformed
+
+    private void btnConsultasClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultasClientes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConsultasClientes1ActionPerformed
+
+    private void btnCadasProdAntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadasProdAntActionPerformed
+        pnlMenuProdutos.setSelectedIndex(0);
+    }//GEN-LAST:event_btnCadasProdAntActionPerformed
+
+    private void btnConsProdProxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsProdProxActionPerformed
+        pnlMenuProdutos.setSelectedIndex(2);
+    }//GEN-LAST:event_btnConsProdProxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1624,22 +2027,29 @@ public class TelaInicialView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAltExcCliProx;
     private javax.swing.JButton btnAltExcClientes;
+    private javax.swing.JButton btnAltExcProdProx;
+    private javax.swing.JButton btnAltExcProdutos;
     private javax.swing.JButton btnAltExcVendProx;
     private javax.swing.JButton btnAltExcVendas;
     private javax.swing.JButton btnCadasCliAnt;
+    private javax.swing.JButton btnCadasProdAnt;
     private javax.swing.JButton btnCadasVendAnt;
     private javax.swing.JButton btnCadastroCliente;
+    private javax.swing.JButton btnCadastroProdutos;
     private javax.swing.JButton btnCadastroVenda;
     private javax.swing.JButton btnConsCliProx;
+    private javax.swing.JButton btnConsProdProx;
     private javax.swing.JButton btnConsVendProx;
     private javax.swing.JButton btnConsultaRelAnali;
     private javax.swing.JButton btnConsultaRelSint;
     private javax.swing.JButton btnConsultaVendas;
     private javax.swing.JButton btnConsultasClientes;
+    private javax.swing.JButton btnConsultasClientes1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel lblAte;
     private javax.swing.JLabel lblAteRelSint;
     private javax.swing.JLabel lblCpfCliVendas;
@@ -1650,15 +2060,21 @@ public class TelaInicialView extends javax.swing.JFrame {
     private javax.swing.JLabel lblDe;
     private javax.swing.JLabel lblDeRelSint;
     private javax.swing.JLabel lblIdConsultaClientes;
+    private javax.swing.JLabel lblIdConsultaClientes1;
     private javax.swing.JLabel lblIdVendas;
     private javax.swing.JLabel lblInfoConsuClientes;
+    private javax.swing.JLabel lblInfoConsuClientes1;
     private javax.swing.JLabel lblInfoConsultaVendas;
     private javax.swing.JLabel lblInfoRelAnali;
     private javax.swing.JLabel lblInfoRelSint;
     private javax.swing.JLabel lblIntroducao;
     private javax.swing.JLabel lblNomeConsultaClientes;
+    private javax.swing.JLabel lblNomeConsultaClientes1;
+    private javax.swing.JLabel lblSomaTotalVendRelAnali;
+    private javax.swing.JLabel lblSomaTotalVendRelSint;
     private javax.swing.JLabel lblTituloBemVindo;
     private javax.swing.JLabel lblTituloConsulClientes;
+    private javax.swing.JLabel lblTituloConsulProdutos;
     private javax.swing.JLabel lblTituloRelAnali;
     private javax.swing.JLabel lblTituloVendas;
     private javax.swing.JLabel lblTituloVendas3;
@@ -1667,9 +2083,11 @@ public class TelaInicialView extends javax.swing.JFrame {
     private javax.swing.JLabel lblUnidadeMonetaria;
     private javax.swing.JLabel lblUnidadeMonetariaSint;
     private javax.swing.JMenuItem mnuAltExcClientes;
+    private javax.swing.JMenuItem mnuAltExcProduto;
     private javax.swing.JMenuItem mnuAltExcVenda;
     private javax.swing.JMenu mnuArquivo;
     private javax.swing.JMenuItem mnuCadastroClientes;
+    private javax.swing.JMenuItem mnuCadastroProduto;
     private javax.swing.JMenuItem mnuCadastroVenda;
     private javax.swing.JMenu mnuCliente;
     private javax.swing.JMenu mnuProduto;
@@ -1677,20 +2095,25 @@ public class TelaInicialView extends javax.swing.JFrame {
     private javax.swing.JMenuBar mnuSistema;
     private javax.swing.JMenu mnuVenda;
     private javax.swing.JPanel pnlAltExcClientes;
+    private javax.swing.JPanel pnlAltExcProdutos;
     private javax.swing.JPanel pnlAltExcVendas;
     private javax.swing.JPanel pnlBackgroundAll;
     private javax.swing.JPanel pnlBackgroundAltEclClientes;
     private javax.swing.JPanel pnlBackgroundCadastroClientes;
     private javax.swing.JPanel pnlBackgroundClientes;
     private javax.swing.JPanel pnlBackgroundConsultaClientes;
+    private javax.swing.JPanel pnlBackgroundConsultaProdutos;
     private javax.swing.JPanel pnlBackgroundInicial;
     private javax.swing.JPanel pnlBackgroundProdutos;
     private javax.swing.JPanel pnlBackgroundRel;
     private javax.swing.JPanel pnlBackgroundVendas;
     private javax.swing.JPanel pnlCadastrarVendas;
     private javax.swing.JPanel pnlCadastroClientes;
+    private javax.swing.JPanel pnlCadastroProdutos;
+    private javax.swing.JPanel pnlConsultaProdutos;
     private javax.swing.JPanel pnlConsultasVendas;
     private javax.swing.JPanel pnlConultaClientes;
+    private javax.swing.JPanel pnlConultaProdutos;
     private javax.swing.JPanel pnlDataRelSint;
     private javax.swing.JPanel pnlDatasRelAnali;
     private javax.swing.JPanel pnlGerirClientes;
@@ -1698,8 +2121,10 @@ public class TelaInicialView extends javax.swing.JFrame {
     private javax.swing.JPanel pnlGerirRelatorios;
     private javax.swing.JPanel pnlGerirVendas;
     private javax.swing.JPanel pnlInfoConsultClientes;
+    private javax.swing.JPanel pnlInfoConsultProdutos;
     private javax.swing.JPanel pnlInfoConsultaVendas;
     private javax.swing.JTabbedPane pnlMenuClientes;
+    private javax.swing.JTabbedPane pnlMenuProdutos;
     private javax.swing.JTabbedPane pnlMenuRelatorios;
     private javax.swing.JTabbedPane pnlMenuVendas;
     private javax.swing.JTabbedPane pnlPrincipal;
@@ -1707,11 +2132,13 @@ public class TelaInicialView extends javax.swing.JFrame {
     private javax.swing.JPanel pnlRelatorioSintetico;
     private javax.swing.JPanel pnlTelaInicial;
     private javax.swing.JPanel pnlTituloConsulClientes;
+    private javax.swing.JPanel pnlTituloConsulProdutos;
     private javax.swing.JPanel pnlTituloConsultaVendas;
     private javax.swing.JPanel pnlTituloRelAnali;
     private javax.swing.JPanel pnlTituloRelSint;
     private javax.swing.JTable tblConsultVendas;
     private javax.swing.JTable tblConsultaClientes;
+    private javax.swing.JTable tblConsultaClientes1;
     private javax.swing.JTable tblRelatorioAnali;
     private javax.swing.JTable tblRelatorioSint;
     private javax.swing.JFormattedTextField txtAnaliDataFim;
@@ -1720,9 +2147,9 @@ public class TelaInicialView extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField txtDataFimRelSint;
     private javax.swing.JFormattedTextField txtDataIniRelSint;
     private javax.swing.JTextField txtIdConsultaClientes;
+    private javax.swing.JTextField txtIdConsultaClientes1;
     private javax.swing.JTextField txtIdVendaConsulta;
     private javax.swing.JTextField txtNomeConsultaClientes;
-    private javax.swing.JTextField txtTotalVendas;
-    private javax.swing.JTextField txtTotalVendasRelSint;
+    private javax.swing.JTextField txtNomeConsultaClientes1;
     // End of variables declaration//GEN-END:variables
 }
