@@ -103,7 +103,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblIdCli.setForeground(new java.awt.Color(204, 255, 204));
         lblIdCli.setText("ID:");
 
-        txtNumCepCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtNumCepCli.setBackground(new java.awt.Color(255, 255, 255));
         txtNumCepCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtNumCepCli.setForeground(new java.awt.Color(0, 0, 0));
         txtNumCepCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
@@ -112,7 +112,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblCpfCli.setForeground(new java.awt.Color(204, 255, 204));
         lblCpfCli.setText("*CPF:");
 
-        txtCpfCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtCpfCli.setBackground(new java.awt.Color(255, 255, 255));
         txtCpfCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
         txtCpfCli.setForeground(new java.awt.Color(0, 0, 0));
         try {
@@ -131,7 +131,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblNomeCli.setForeground(new java.awt.Color(204, 255, 204));
         lblNomeCli.setText("*Nome:");
 
-        txtLogradCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtLogradCli.setBackground(new java.awt.Color(255, 255, 255));
         txtLogradCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtLogradCli.setForeground(new java.awt.Color(0, 0, 0));
         txtLogradCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
@@ -140,7 +140,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblLograCli.setForeground(new java.awt.Color(204, 255, 204));
         lblLograCli.setText("*Logradouro:");
 
-        txtNomeCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtNomeCli.setBackground(new java.awt.Color(255, 255, 255));
         txtNomeCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtNomeCli.setForeground(new java.awt.Color(0, 0, 0));
         txtNomeCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
@@ -149,7 +149,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblDataNascCli.setForeground(new java.awt.Color(204, 255, 204));
         lblDataNascCli.setText("*Data de Nascimento:");
 
-        txtDataNascCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtDataNascCli.setBackground(new java.awt.Color(255, 255, 255));
         txtDataNascCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
         txtDataNascCli.setForeground(new java.awt.Color(0, 0, 0));
         try {
@@ -163,7 +163,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblCepCli.setForeground(new java.awt.Color(204, 255, 204));
         lblCepCli.setText("*CEP:");
 
-        txtCepCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtCepCli.setBackground(new java.awt.Color(255, 255, 255));
         txtCepCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
         txtCepCli.setForeground(new java.awt.Color(0, 0, 0));
         try {
@@ -177,7 +177,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblNumCepCli.setForeground(new java.awt.Color(204, 255, 204));
         lblNumCepCli.setText("*Numero:");
 
-        txtIdCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtIdCli.setBackground(new java.awt.Color(255, 255, 255));
         txtIdCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtIdCli.setForeground(new java.awt.Color(0, 0, 0));
         txtIdCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
@@ -186,7 +186,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblComplCli.setForeground(new java.awt.Color(204, 255, 204));
         lblComplCli.setText("Complemento:");
 
-        txtCompleCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtCompleCli.setBackground(new java.awt.Color(255, 255, 255));
         txtCompleCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtCompleCli.setForeground(new java.awt.Color(0, 0, 0));
         txtCompleCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
@@ -195,7 +195,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblCidCli.setForeground(new java.awt.Color(204, 255, 204));
         lblCidCli.setText("*Cidade:");
 
-        txtCidCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtCidCli.setBackground(new java.awt.Color(255, 255, 255));
         txtCidCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtCidCli.setForeground(new java.awt.Color(0, 0, 0));
         txtCidCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
@@ -204,7 +204,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblTelCli.setForeground(new java.awt.Color(204, 255, 204));
         lblTelCli.setText("*Telefone:");
 
-        txtTelCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtTelCli.setBackground(new java.awt.Color(255, 255, 255));
         txtTelCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
         txtTelCli.setForeground(new java.awt.Color(0, 0, 0));
         try {
@@ -234,7 +234,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblEmailCli.setForeground(new java.awt.Color(204, 255, 204));
         lblEmailCli.setText("*E-mail:");
 
-        txtEmailCli.setBackground(new java.awt.Color(204, 255, 204));
+        txtEmailCli.setBackground(new java.awt.Color(255, 255, 255));
         txtEmailCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtEmailCli.setForeground(new java.awt.Color(0, 0, 0));
         txtEmailCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
@@ -248,7 +248,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblECCli.setForeground(new java.awt.Color(204, 255, 204));
         lblECCli.setText("*Estado Civil:");
 
-        cbbEstCivCli.setBackground(new java.awt.Color(204, 255, 204));
+        cbbEstCivCli.setBackground(new java.awt.Color(255, 255, 255));
         cbbEstCivCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         cbbEstCivCli.setForeground(new java.awt.Color(0, 0, 0));
         cbbEstCivCli.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione..", "Solteiro(a)", "Casado(a)", "Viúvo(a)", "Divorciado(a)", "União Estável" }));
@@ -261,18 +261,6 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
             .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                        .addComponent(lblEmailCli)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEmailCli, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(lblECCli)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbbEstCivCli, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                        .addComponent(lblComplCli)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCompleCli, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                             .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -290,10 +278,6 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
                                     .addComponent(rdbSexFemCli))
                                 .addComponent(txtNomeCli, javax.swing.GroupLayout.PREFERRED_SIZE, 593, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                            .addComponent(lblLograCli)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtLogradCli, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                             .addGap(120, 120, 120)
                             .addComponent(lblIdCli)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -303,23 +287,41 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(txtCpfCli, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                            .addComponent(lblCepCli)
+                            .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblCepCli, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblLograCli))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtCepCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(98, 98, 98)
-                            .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtLogradCli)
                                 .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                                    .addComponent(lblCidCli)
+                                    .addComponent(txtCepCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(98, 98, 98)
+                                    .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
+                                            .addComponent(lblCidCli)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtCidCli, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
+                                            .addComponent(lblTelCli)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtTelCli, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(69, 69, 69)
+                                    .addComponent(lblNumCepCli)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txtCidCli, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                                    .addComponent(lblTelCli)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txtTelCli, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(69, 69, 69)
-                            .addComponent(lblNumCepCli)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtNumCepCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtNumCepCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
+                        .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblComplCli)
+                            .addComponent(lblEmailCli))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInfoCadasClientesLayout.createSequentialGroup()
+                                .addComponent(txtEmailCli)
+                                .addGap(28, 28, 28)
+                                .addComponent(lblECCli)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbbEstCivCli, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCompleCli, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlInfoCadasClientesLayout.setVerticalGroup(
@@ -444,185 +446,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEmailCliActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        if (txtCpfCli.getText().trim().equals("") || txtNomeCli.getText().trim().equals("") || txtDataNascCli.getText().trim().equals("") || txtTelCli.getText().trim().equals("") || rdbSexMascCli.getText().trim().equals("") || rdbSexFemCli.getText().trim().equals("") || txtCepCli.getText().trim().equals("") || txtCidCli.getText().trim().equals("") || txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            txtCpfCli.setBackground(Color.red);
-            txtNomeCli.setBackground(Color.red);
-            txtDataNascCli.setBackground(Color.red);
-            txtTelCli.setBackground(Color.red);
-            txtCepCli.setBackground(Color.red);
-            txtCidCli.setBackground(Color.red);
-            txtNumCepCli.setBackground(Color.red);
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtNomeCli.getText().trim().equals("") || txtDataNascCli.getText().trim().equals("") || txtTelCli.getText().trim().equals("") || rdbSexMascCli.getText().trim().equals("") || rdbSexFemCli.getText().trim().equals("") || txtCepCli.getText().trim().equals("") || txtCidCli.getText().trim().equals("") || txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            txtNomeCli.setBackground(Color.red);
-            txtDataNascCli.setBackground(Color.red);
-            txtTelCli.setBackground(Color.red);
-            txtCepCli.setBackground(Color.red);
-            txtCidCli.setBackground(Color.red);
-            txtNumCepCli.setBackground(Color.red);
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtDataNascCli.getText().trim().equals("") || txtTelCli.getText().trim().equals("") || rdbSexMascCli.getText().trim().equals("") || rdbSexFemCli.getText().trim().equals("") || txtCepCli.getText().trim().equals("") || txtCidCli.getText().trim().equals("") || txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            txtDataNascCli.setBackground(Color.red);
-            txtTelCli.setBackground(Color.red);
-            txtCepCli.setBackground(Color.red);
-            txtCidCli.setBackground(Color.red);
-            txtNumCepCli.setBackground(Color.red);
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtTelCli.getText().trim().equals("") || rdbSexMascCli.getText().trim().equals("") || rdbSexFemCli.getText().trim().equals("") || txtCepCli.getText().trim().equals("") || txtCidCli.getText().trim().equals("") || txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (rdbSexMascCli.getText().trim().equals("") || rdbSexFemCli.getText().trim().equals("") || txtCepCli.getText().trim().equals("") || txtCidCli.getText().trim().equals("") || txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            txtTelCli.setBackground(Color.red);
-            txtCepCli.setBackground(Color.red);
-            txtCidCli.setBackground(Color.red);
-            txtNumCepCli.setBackground(Color.red);
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtCepCli.getText().trim().equals("") || txtCidCli.getText().trim().equals("") || txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            if (rdbSexMascCli.getText().trim().equals("")) {
-                String sexx = rdbSexFemCli.getText();
-                char SexCli = sexx.charAt(0);
-            } else if (rdbSexFemCli.getText().trim().equals("")) {
-                String sexx = rdbSexMascCli.getText();
-                char SexCli = sexx.charAt(0);
-            }
-            txtCepCli.setBackground(Color.red);
-            txtCidCli.setBackground(Color.red);
-            txtNumCepCli.setBackground(Color.red);
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtCidCli.getText().trim().equals("") || txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            if (rdbSexMascCli.getText().trim().equals("")) {
-                String sexx = rdbSexFemCli.getText();
-                char SexCli = sexx.charAt(0);
-            } else if (rdbSexFemCli.getText().trim().equals("")) {
-                String sexx = rdbSexMascCli.getText();
-                char SexCli = sexx.charAt(0);
-            }
-            int cepCli = Integer.parseInt(txtCepCli.getText());
-            txtCidCli.setBackground(Color.red);
-            txtNumCepCli.setBackground(Color.red);
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtNumCepCli.getText().trim().equals("") || txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            if (rdbSexMascCli.getText().trim().equals("")) {
-                String sexx = rdbSexFemCli.getText();
-                char SexCli = sexx.charAt(0);
-            } else if (rdbSexFemCli.getText().trim().equals("")) {
-                String sexx = rdbSexMascCli.getText();
-                char SexCli = sexx.charAt(0);
-            }
-            int cepCli = Integer.parseInt(txtCepCli.getText());
-            String cidCli = txtCidCli.getText();
-            txtNumCepCli.setBackground(Color.red);
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtLogradCli.getText().trim().equals("") || txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            if (rdbSexMascCli.getText().trim().equals("")) {
-                String sexx = rdbSexFemCli.getText();
-                char SexCli = sexx.charAt(0);
-            } else if (rdbSexFemCli.getText().trim().equals("")) {
-                String sexx = rdbSexMascCli.getText();
-                char SexCli = sexx.charAt(0);
-            }
-            int cepCli = Integer.parseInt(txtCepCli.getText());
-            String cidCli = txtCidCli.getText();
-            int numCepCli = Integer.parseInt(txtNumCepCli.getText());
-            txtLogradCli.setBackground(Color.red);
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if (txtEmailCli.getText().trim().equals("") || (cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            if (rdbSexMascCli.getText().trim().equals("")) {
-                String sexx = rdbSexFemCli.getText();
-                char SexCli = sexx.charAt(0);
-            } else if (rdbSexFemCli.getText().trim().equals("")) {
-                String sexx = rdbSexMascCli.getText();
-                char SexCli = sexx.charAt(0);
-            }
-            int cepCli = Integer.parseInt(txtCepCli.getText());
-            String cidCli = txtCidCli.getText();
-            int numCepCli = Integer.parseInt(txtNumCepCli.getText());
-            String lograCli = txtLogradCli.getText();
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else if ((cbbEstCivCli.getSelectedIndex() == 0)) {
-            int cpfCli = Integer.parseInt(txtCpfCli.getText());
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            if (rdbSexMascCli.getText().trim().equals("")) {
-                String sexx = rdbSexFemCli.getText();
-                char SexCli = sexx.charAt(0);
-            } else if (rdbSexFemCli.getText().trim().equals("")) {
-                String sexx = rdbSexMascCli.getText();
-                char SexCli = sexx.charAt(0);
-            }
-            int cepCli = Integer.parseInt(txtCepCli.getText());
-            String cidCli = txtCidCli.getText();
-            int numCepCli = Integer.parseInt(txtNumCepCli.getText());
-            String lograCli = txtLogradCli.getText();
-            String emailCli = txtEmailCli.getText();
-            txtEmailCli.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Preencha os campos obrigatórios!");
-        } else {
-            String cpfCli = txtCpfCli.getText();
-            String nomeCli = txtNomeCli.getText();
-            int dataNascCli = Integer.parseInt(txtDataNascCli.getText());
-            int telCli = Integer.parseInt(txtTelCli.getText());
-            char SexCli = 0;
-            if (rdbSexMascCli.getText().trim().equals("")) {
-                String sexx = rdbSexFemCli.getText();
-                SexCli = sexx.charAt(0);
-            } else if (rdbSexFemCli.getText().trim().equals("")) {
-                String sexx = rdbSexMascCli.getText();
-                SexCli = sexx.charAt(0);
-            }
-            int cepCli = Integer.parseInt(txtCepCli.getText());
-            String cidCli = txtCidCli.getText();
-            int numCepCli = Integer.parseInt(txtNumCepCli.getText());
-            String lograCli = txtLogradCli.getText();
-            String emailCli = txtEmailCli.getText();
-            String estCivCli = cbbEstCivCli.getSelectedItem().toString();
-            JOptionPane.showMessageDialog(this, "Cliente Cadastrado com Suscesso!");
-        }
+        
 
     }//GEN-LAST:event_btnSalvarActionPerformed
 
