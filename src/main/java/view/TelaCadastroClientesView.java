@@ -9,6 +9,7 @@ import java.awt.Color;
 import static java.awt.Color.red;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
+import utils.Validador;
 
 /**
  *
@@ -32,7 +33,6 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btgSexoCliente = new javax.swing.ButtonGroup();
         pnlPrincipalCadasCliente = new javax.swing.JPanel();
         pnlTituloCadastroVenda = new javax.swing.JPanel();
         lblTituloCadasVenda = new javax.swing.JLabel();
@@ -58,12 +58,11 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         lblTelCli = new javax.swing.JLabel();
         txtTelCli = new javax.swing.JFormattedTextField();
         txtSexoCli = new javax.swing.JLabel();
-        rdbSexMascCli = new javax.swing.JRadioButton();
-        rdbSexFemCli = new javax.swing.JRadioButton();
         lblEmailCli = new javax.swing.JLabel();
         txtEmailCli = new javax.swing.JTextField();
         lblECCli = new javax.swing.JLabel();
         cbbEstCivCli = new javax.swing.JComboBox<>();
+        cbbSexoCli = new javax.swing.JComboBox<>();
         btnSalvar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
 
@@ -218,18 +217,6 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         txtSexoCli.setForeground(new java.awt.Color(204, 255, 204));
         txtSexoCli.setText("*Sexo:");
 
-        rdbSexMascCli.setBackground(new java.awt.Color(0, 0, 0));
-        btgSexoCliente.add(rdbSexMascCli);
-        rdbSexMascCli.setForeground(new java.awt.Color(204, 255, 204));
-        rdbSexMascCli.setText("M");
-        rdbSexMascCli.setActionCommand("M");
-
-        rdbSexFemCli.setBackground(new java.awt.Color(0, 0, 0));
-        btgSexoCliente.add(rdbSexFemCli);
-        rdbSexFemCli.setForeground(new java.awt.Color(204, 255, 204));
-        rdbSexFemCli.setText("F");
-        rdbSexFemCli.setActionCommand("F");
-
         lblEmailCli.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
         lblEmailCli.setForeground(new java.awt.Color(204, 255, 204));
         lblEmailCli.setText("*E-mail:");
@@ -254,6 +241,12 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
         cbbEstCivCli.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione..", "Solteiro(a)", "Casado(a)", "Viúvo(a)", "Divorciado(a)", "União Estável" }));
         cbbEstCivCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
 
+        cbbSexoCli.setBackground(new java.awt.Color(255, 255, 255));
+        cbbSexoCli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        cbbSexoCli.setForeground(new java.awt.Color(0, 0, 0));
+        cbbSexoCli.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione...", "Masculino", "Feminino" }));
+        cbbSexoCli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 204), 1, true));
+
         javax.swing.GroupLayout pnlInfoCadasClientesLayout = new javax.swing.GroupLayout(pnlInfoCadasClientes);
         pnlInfoCadasClientes.setLayout(pnlInfoCadasClientesLayout);
         pnlInfoCadasClientesLayout.setHorizontalGroup(
@@ -264,28 +257,29 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
                     .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                             .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblDataNascCli)
-                                .addComponent(lblNomeCli))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                                    .addComponent(txtDataNascCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(386, 386, 386)
-                                    .addComponent(txtSexoCli)
+                                    .addGap(120, 120, 120)
+                                    .addComponent(lblIdCli)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(rdbSexMascCli)
+                                    .addComponent(txtIdCli, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblCpfCli)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(rdbSexFemCli))
-                                .addComponent(txtNomeCli, javax.swing.GroupLayout.PREFERRED_SIZE, 593, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(lblIdCli)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIdCli, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblCpfCli)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtCpfCli, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtCpfCli, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
+                                    .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblDataNascCli)
+                                        .addComponent(lblNomeCli))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
+                                            .addComponent(txtDataNascCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(386, 386, 386)
+                                            .addComponent(txtSexoCli)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(cbbSexoCli, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(txtNomeCli))))
+                            .addGap(6, 6, 6))
                         .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                             .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(lblCepCli, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -295,7 +289,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
                                 .addComponent(txtLogradCli)
                                 .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                                     .addComponent(txtCepCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(98, 98, 98)
+                                    .addGap(124, 124, 124)
                                     .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                                             .addComponent(lblCidCli)
@@ -305,23 +299,23 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
                                             .addComponent(lblTelCli)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(txtTelCli, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(69, 69, 69)
+                                    .addGap(46, 46, 46)
                                     .addComponent(lblNumCepCli)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txtNumCepCli, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(txtNumCepCli, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
                         .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblComplCli)
                             .addComponent(lblEmailCli))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInfoCadasClientesLayout.createSequentialGroup()
-                                .addComponent(txtEmailCli)
-                                .addGap(28, 28, 28)
+                        .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(pnlInfoCadasClientesLayout.createSequentialGroup()
+                                .addComponent(txtEmailCli, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lblECCli)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cbbEstCivCli, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtCompleCli, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtCompleCli, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlInfoCadasClientesLayout.setVerticalGroup(
@@ -344,8 +338,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
                     .addComponent(lblTelCli)
                     .addComponent(txtTelCli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSexoCli)
-                    .addComponent(rdbSexMascCli)
-                    .addComponent(rdbSexFemCli))
+                    .addComponent(cbbSexoCli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(pnlInfoCadasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumCepCli)
@@ -371,7 +364,7 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        pnlInfoCadasClientesLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {cbbEstCivCli, txtCepCli, txtCompleCli, txtCpfCli, txtDataNascCli, txtEmailCli, txtLogradCli, txtNomeCli, txtNumCepCli, txtTelCli});
+        pnlInfoCadasClientesLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {cbbEstCivCli, cbbSexoCli, txtCepCli, txtCompleCli, txtCpfCli, txtDataNascCli, txtEmailCli, txtLogradCli, txtNomeCli, txtNumCepCli, txtTelCli});
 
         btnSalvar.setBackground(new java.awt.Color(204, 255, 204));
         btnSalvar.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
@@ -446,7 +439,22 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEmailCliActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        Validador validacao = new Validador();
         
+        validacao.ValidarNumero(txtCpfCli);
+        validacao.ValidarTextos(txtNomeCli);
+        validacao.ValidarTelefone(txtTelCli);
+        validacao.ValidarComboBox(cbbSexoCli);
+        validacao.ValidarNumero(txtCepCli);
+        validacao.ValidarTextos(txtCidCli);
+        validacao.ValidarNumero(txtNumCepCli);
+        validacao.ValidarTextos(txtLogradCli);
+        validacao.ValidarTextos(txtEmailCli);
+        validacao.ValidarComboBox(cbbEstCivCli);
+        
+        if(validacao.hasErro()){
+            JOptionPane.showMessageDialog(this, "Preencha corretamente os campos em vermelho");
+        }
 
     }//GEN-LAST:event_btnSalvarActionPerformed
 
@@ -455,17 +463,18 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCpfCliActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
-        txtCpfCli.setText("");
-        txtNomeCli.setText("");
-        txtDataNascCli.setText("");
-        txtTelCli.setText("");
-        txtCepCli.setText("");
-        txtCidCli.setText("");
-        txtNumCepCli.setText("");
-        txtLogradCli.setText("");
-        txtCompleCli.setText("");
-        txtEmailCli.setText("");
-        cbbEstCivCli.setSelectedIndex(0);
+        txtCpfCli.setText("");txtCpfCli.setBackground(Color.white);
+        txtNomeCli.setText("");txtNomeCli.setBackground(Color.white);
+        txtDataNascCli.setText("");txtDataNascCli.setBackground(Color.white);
+        txtTelCli.setText("");txtTelCli.setBackground(Color.white);
+        cbbSexoCli.setSelectedIndex(0);cbbSexoCli.setBackground(Color.white);
+        txtCepCli.setText("");txtCepCli.setBackground(Color.white);
+        txtCidCli.setText("");txtCidCli.setBackground(Color.white);
+        txtNumCepCli.setText("");txtNumCepCli.setBackground(Color.white);
+        txtLogradCli.setText("");txtLogradCli.setBackground(Color.white);
+        txtCompleCli.setText("");txtCompleCli.setBackground(Color.white);
+        txtEmailCli.setText("");txtEmailCli.setBackground(Color.white);
+        cbbEstCivCli.setSelectedIndex(0);cbbEstCivCli.setBackground(Color.white);
 
     }//GEN-LAST:event_btnLimparActionPerformed
 
@@ -506,10 +515,10 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup btgSexoCliente;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JComboBox<String> cbbEstCivCli;
+    private javax.swing.JComboBox<String> cbbSexoCli;
     private javax.swing.JLabel lblCepCli;
     private javax.swing.JLabel lblCidCli;
     private javax.swing.JLabel lblComplCli;
@@ -526,8 +535,6 @@ public class TelaCadastroClientesView extends javax.swing.JFrame {
     private javax.swing.JPanel pnlInfoCadasClientes;
     private javax.swing.JPanel pnlPrincipalCadasCliente;
     private javax.swing.JPanel pnlTituloCadastroVenda;
-    private javax.swing.JRadioButton rdbSexFemCli;
-    private javax.swing.JRadioButton rdbSexMascCli;
     private javax.swing.JFormattedTextField txtCepCli;
     private javax.swing.JTextField txtCidCli;
     private javax.swing.JTextField txtCompleCli;
